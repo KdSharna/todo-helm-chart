@@ -1,0 +1,42 @@
+  common: 
+    containerRegistryURL: akscon101.azurecr.io
+    ingressClass: azure-application-gateway
+  ui: 
+    replicas: 4
+    image: 
+      name: todo-ui
+      tag: v1
+    port: 80
+    ServicePort: 80
+    ingress:
+      host: todo-ui.jhandu.shop
+
+  gettask: 
+    replicas: 3
+    image: 
+      name: todo-get-task-api
+      tag: v1
+    port: 80
+    ServicePort: 80
+    ingress:
+      host: todo-get-task-api.jhandu.shop
+
+  addtask: 
+    replicas: 2
+    image: 
+      name: todo-add-tasks-api
+      tag: v1
+    port: 80
+    ServicePort: 80
+    ingress:
+      host: todo-add-tasks-api.jhandu.shop
+
+  deletetask: 
+    replicas: 3
+    image: 
+      name: todo-delete-tasks-api
+      tag: v1
+    port: 80
+    ServicePort: 80
+    ingress:
+      host: todo-delete-tasks-api.jhandu.shop

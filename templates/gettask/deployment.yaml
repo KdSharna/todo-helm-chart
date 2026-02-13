@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-todo-get-task-api
+spec:
+  replicas: {{ .Values.gettask.replicas }}
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}-todo-get-task-api
+  template:
+    metadata:
+      labels:
+        app: {{ .Release.Name }}-todo-get-task-api
+    spec:
+      containers:
+      - name: {{ .Release.Name }}-todo-get-task-api
+        image: {{ .Values.common.containerRegistryURL }}/{{ .Values.gettask.image.name }}:{{ .Values.gettask.image.tag }}
+        ports:
+        - containerPort: {{ .Values.gettask.port }}
+        # env: 
+        # - name: CONNECTION_STRING
+        #   value: "Driver={ODBC Driver 18 for SQL Server};Server=tcp:neptual-sql-server.database.windows.net,1433;Database=my-sql-db;Uid=sqladminuser;Pwd=SqlAdmin@123;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"        

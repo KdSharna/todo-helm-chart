@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-todo-add-tasks-api
+spec:
+  replicas: {{ .Values.addtask.replicas }}
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}-todo-add-tasks-api
+  template:
+    metadata:
+      labels:
+        app: {{ .Release.Name }}-todo-add-tasks-api
+    spec:
+      containers:
+      - name: {{ .Release.Name }}-todo-add-tasks-api
+        image: {{ .Values.common.containerRegistryURL }}/{{ .Values.addtask.image.name }}:{{ .Values.addtask.image.tag }}
+        ports:
+        - containerPort: {{ .Values.addtask.port }}
+        # env: 
+        # - name: CONNECTION_STRING
+        #   value: "Driver={ODBC Driver 18 for SQL Server};Server=tcp:neptual-sql-server.database.windows.net,1433;Database=my-sql-db;Uid=sqladminuser;Pwd=SqlAdmin@123;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"        

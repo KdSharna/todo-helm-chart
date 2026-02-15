@@ -9,7 +9,7 @@
     port: 80
     ServicePort: 80
     ingress:
-      host: dev-todo-ui.jhandu.shop
+      host: dev-todo-ui.kds14.shop
 
   gettask: 
     replicas: 3
@@ -20,7 +20,7 @@
     ServicePort: 80
     connectionString: Driver={ODBC Driver 18 for SQL Server};Server=tcp:neptual-sql-server.database.windows.net,1433;Database=my-sql-db;Uid=sqladminuser;Pwd=SqlAdmin@123;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;
     ingress:
-      host: dev-todo-get-task-api.jhandu.shop
+      host: dev-todo-get-task-api.kds14.shop
       ingressClass: azure-application-gateway
 
   addtask: 
@@ -32,7 +32,7 @@
     ServicePort: 80
     connectionString: Driver={ODBC Driver 18 for SQL Server};Server=tcp:neptual-sql-server.database.windows.net,1433;Database=my-sql-db;Uid=sqladminuser;Pwd=SqlAdmin@123;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;
     ingress:
-      host: dev-todo-add-tasks-api.jhandu.shop
+      host: dev-todo-add-tasks-api.kds14.shop
       ingressClass: azure-application-gateway
 
   deletetask: 
@@ -44,5 +44,5 @@
     ServicePort: 80
     connectionString: Driver={ODBC Driver 18 for SQL Server};Server=tcp:neptual-sql-server.database.windows.net,1433;Database=my-sql-db;Uid=sqladminuser;Pwd=SqlAdmin@123;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;
     ingress:
-      host: dev-todo-delete-tasks-api.jhandu.shop
+      host: dev-todo-delete-tasks-api.kds14.shop
       ingressClass: azure-application-gateway

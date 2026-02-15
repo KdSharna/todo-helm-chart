@@ -28,7 +28,7 @@
     image: 
       name: todo-add-tasks-api
       tag: v1
-    port: 80
+    port: 8000
     ServicePort: 80
     connectionString: Driver={ODBC Driver 18 for SQL Server};Server=tcp:neptual-sql-server.database.windows.net,1433;Database=my-sql-db;Uid=sqladminuser;Pwd=SqlAdmin@123;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;
     ingress:
@@ -40,7 +40,7 @@
     image: 
       name: todo-delete-tasks-api
       tag: v1
-    port: 80
+    port: 8000
     ServicePort: 80
     connectionString: Driver={ODBC Driver 18 for SQL Server};Server=tcp:neptual-sql-server.database.windows.net,1433;Database=my-sql-db;Uid=sqladminuser;Pwd=SqlAdmin@123;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;
     ingress:

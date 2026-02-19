@@ -17,6 +17,6 @@ spec:
         image: {{ .Values.common.containerRegistryURL }}/{{ .Values.addtask.image.name }}:{{ .Values.addtask.image.tag }}
         ports:
         - containerPort: {{ .Values.addtask.port }}
-        # env: 
-        # - name: CONNECTION_STRING
-        #   value: "Driver={ODBC Driver 18 for SQL Server};Server=tcp:neptual-sql-server.database.windows.net,1433;Database=my-sql-db;Uid=sqladminuser;Pwd=SqlAdmin@123;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"        
+        env: 
+        - name: CONNECTION_STRING
+          value: "{{ .Values.gettask.connectionstring }}"

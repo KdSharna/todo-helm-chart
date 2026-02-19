@@ -19,4 +19,5 @@ spec:
         - containerPort: {{ .Values.ui.port }}
         # env: 
         # - name: CONNECTION_STRING
-        #   value: "Driver={ODBC Driver 18 for SQL Server};Server=tcp:neptual-sql-server.database.windows.net,1433;Database=my-sql-db;Uid=sqladminuser;Pwd=SqlAdmin@123;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"        
+        #   value: "Driver={ODBC Driver 18 for SQL Server};Server=tcp:neptual-sql-server.database.windows.net,1433;Database=my-sql-db;Uid=sqladminuser;Pwd=SqlAdmin@123;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
+          

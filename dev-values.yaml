@@ -2,7 +2,7 @@
     containerRegistryURL: akscon101.azurecr.io
     ingressClass: azure-application-gateway
   ui: 
-    replicas: 4
+    replicas: 2
     image: 
       name: todo-ui
       tag: v1
@@ -12,7 +12,7 @@
       host: dev-todo-ui.kds14.shop
 
   gettask: 
-    replicas: 3
+    replicas: 2
     image: 
       name: todo-get-task-api
       tag: v1
@@ -36,7 +36,7 @@
       ingressClass: azure-application-gateway
 
   deletetask: 
-    replicas: 3
+    replicas: 2
     image: 
       name: todo-delete-tasks-api
       tag: v1
